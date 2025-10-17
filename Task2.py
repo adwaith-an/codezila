@@ -1,8 +1,16 @@
-#Task 2
-#F3: Reverse a Word — Reverse a given word using loops (no built-in functions).
+# F1: Sum of Digits
 
-word = input("Enter the word that has to be reversed : ")
-reversed_word=''
-for i in range(len(word)-1,-1,-1):
-    reversed_word += word[i]
-print("The reversed word is : ",reversed_word)
+# Take input from the user
+N = int(input("Enter an integer: "))
+
+# Initialize sum
+sum_of_digits = 0
+
+# Use a loop to find the sum of digits
+temp = abs(N)  # handle negative numbers
+while temp > 0:
+    digit = temp % 10
+    sum_of_digits += digit
+    temp //= 10
+
+print("Sum of digits:", sum_of_digits)
