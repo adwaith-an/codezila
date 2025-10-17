@@ -1,21 +1,18 @@
-#Task 3
-#O2: Calculate Area — Add a method getArea() that returns width × height.
-
+# O1: Rectangle Class
 
 class Rectangle:
     def __init__(self, width, height):
         self.width = width
         self.height = height
-        print(f"Rectangle created with width: {self.width} and height: {self.height}")
 
-    def getArea(self):
-        return self.width * self.height
+    def display(self):
+        print(f"Width: {self.width}")
+        print(f"Height: {self.height}")
 
-width = int(input("Enter the Width : "))
-length = int(input("Enter the Length : "))
 
-my_rectangle = Rectangle(width, length)
+# Example usage
+w = int(input("Enter width: "))
+h = int(input("Enter height: "))
 
-area = my_rectangle.getArea()
-
-print(f"The area of the rectangle is: {area}") 
+rect = Rectangle(w, h)
+rect.display()
